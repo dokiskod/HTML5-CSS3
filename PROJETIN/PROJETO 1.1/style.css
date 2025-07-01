@@ -1,2 +1,40 @@
 @charset "UTF-8";
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 500px;
+    width: 25%;
+    height: 100vh;
+    border-right: 1px solid #363636;
+    background-color: #131313;
+}
+
+main{
+    position: absolute;
+    width: 75%;
+    right: 0;
+    background-color: #131313;
+    height: 100vh;
+    color: white;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.stories{
+    height: 10%;
+
+}
