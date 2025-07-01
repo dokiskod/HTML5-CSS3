@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorthand/Peso/Style e Import</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap'); /*@ são regras de CSS, fora de seletores*/
+
+        /*O shorthand font é uma forma de declarar uma vez diversas características da fonte.
+        ordem: style, weight, size, family*/
+        
+        body{
+            font-style: italic; /*italic ou normal*/
+            font-weight:500; /*light, normal, bold, bolder*/
+            font-size: 1em;
+            font-family: "IBM Plex Mono", monospace;
+        }
+
+        /*Com shorthand*/
+
+        h1{
+            font:italic bold 2em "IBM Plex Mono", monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Titulo</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi aliquam nesciunt fugit suscipit soluta magni porro quibusdam sit velit, eos ipsum mollitia rem esse maiores excepturi perferendis id modi ratione autem provident. Nulla dignissimos in ex esse consequuntur. Esse nostrum quae ut quaerat nesciunt impedit, totam vitae maxime tenetur nulla maiores quam explicabo porro necessitatibus mollitia ipsa consequatur quis veritatis, libero praesentium aliquam molestiae quidem. Dolorum ad vel facilis quos alias ratione placeat totam obcaecati qui voluptatem? Deleniti quod placeat voluptatum expedita. Amet, eligendi itaque dicta vel, reiciendis natus, animi ullam aut quos hic saepe provident eum harum sequi aliquid.</p>
+
+    <h2>Subtitulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit mollitia at optio beatae molestiae minima praesentium. Iure itaque, dolorem pariatur delectus incidunt dolore facere animi illo reiciendis, suscipit nam reprehenderit non, ut minus perspiciatis maxime unde impedit neque asperiores repellat libero? Ad accusamus sint explicabo mollitia adipisci quis! Tempore illo, nihil iure temporibus eveniet necessitatibus fugiat ut consequatur! Odit minima necessitatibus odio obcaecati? Magnam autem animi culpa obcaecati harum ducimus facere fugit dolorem cupiditate voluptas fuga id hic nisi et, veniam recusandae in, tempora nulla suscipit deleniti placeat velit officia odit dolorum! Eligendi ad, reprehenderit libero sunt temporibus a. Sequi!</p>
+</body>
+</html>

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/*
+CSS # - HTML id -> 1 elemento, sobrepõe class
+CSS . - HTML class  -> varios
+*/
+
+body{
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2em;
+}
+
+h1{
+    color: rgb(167, 26, 26)
+}
+
+h2{
+    color: rgb(138, 55, 55);
+}
+
+h1#principal{
+    text-align: center;
+    background-color: rgb(167, 26, 26);
+    border-radius: 1.5em;
+    color: white;
+}
+
+p{
+    text-align: justify;
+}
+
+.basico{
+    color: rgb(75, 214, 75);
+}
+
+.intermed{
+    color: rgb(235, 176, 50);
+    font-weight: bold;
+}
+
+.avancado{
+    color: rgb(240, 50, 50);
+}       
+
+.destaque{
+    background-color: tan;
+}

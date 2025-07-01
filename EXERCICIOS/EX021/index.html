@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoelementos</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            color: rgb(233, 32, 32);
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: blueviolet;
+        }
+
+        a:hover{
+            color: blue;
+            text-decoration: underline;
+        }
+
+        a:active{
+            color: yellow;
+        }
+        /*pseudo elemento funciona com classe, seletor e id*/
+        a::after{  
+            content: '[link]'; 
+            text-decoration: none;
+            color: lightgray;
+            font-weight: normal;
+        }
+
+        h1::before{
+            content: "✎";
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudoclasses</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io">Repositório Github</a></li>
+        <li><a href="https://youtube.com/cursoemvideo/">Canal do Youtube</a></li>
+        <li><a href="http://www.cursoemvideo.com">Site do CursoEmVideo</a></li>
+    </ul>
+</body>
+</html>

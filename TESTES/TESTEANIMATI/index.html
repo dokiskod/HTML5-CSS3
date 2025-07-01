@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(24, 23, 22);
+            max-width: 300px;
+            margin: 0 auto;
+            color: aliceblue;
+            min-height: 100vh;
+        }
+
+        @property --value{
+            syntax: "<length>";
+            initial-value: 16px;
+            inherits: false;
+        }
+
+        @property --cor{
+            syntax: "<color>";
+            initial-value: red;
+            inherits: false;
+        }
+
+        @property --angulo{
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        main{
+            background-color: rgb(48, 48, 48);
+            width: 100px;
+            height: 45px;
+            text-align: center;
+            align-content: center;
+            border-radius: 10px;
+            position: fixed;
+            top: 50%; 
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+
+        }
+
+        main>h1{
+            margin: auto auto;
+        }
+        
+        main:hover > h1 {
+            --value:20px;
+            animation: pulo 2s ease-in-out infinite, cor 2s ease-in-out infinite, jitter 2s ease-in-out infinite;;
+            font-size: var(--value);
+            color: var(--cor);
+            --cor:rgb(34, 170, 0);
+            transform: rotate(var(--angulo));
+            --angulo:0deg;
+            text-shadow: 0px 0px 8px var(--cor);
+            cursor: grabbing;
+            user-select: none;
+        }
+
+        @keyframes pulo{
+            0% {--value:20px;}
+            50% {--value:26px;}
+            100% {--value:20px;}
+        }
+
+        @keyframes cor{
+            0% {--cor: rgba(255, 79, 79, 0.459);}
+            50% {--cor:white;}
+            100% {--cor:rgba(123, 255, 91, 0.349);}
+        }
+
+        @keyframes jitter{
+            0% {--angulo:0deg;}
+            25% {--angulo:1.5deg;}
+            50% {--angulo:-1.5deg;}
+            75% {--angulo:0.5deg;}
+            100% {--angulo:0deg;}
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Titulo</h1>
+    </main>
+</body>
+</html>
