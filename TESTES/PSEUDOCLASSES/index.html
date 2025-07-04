@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudoclasses CSS - Exemplos</title>
+  <style>
+    /* Estado de link */
+    a:link { color: blue; }
+    a:visited { color: purple; }
+    a:hover { text-decoration: underline; }
+    a:active { color: red; }
+
+    /* Estado de botão */
+    button:hover { background-color: lightblue; }
+    button:active { transform: scale(0.98); }
+
+    /* Foco em input */
+    input:focus { border: 6px solid blue; }
+
+    /* Checked e disabled */
+    input:checked + label { color: green; }
+    input:disabled { background-color: #ddd; }
+
+    /* Validação */
+    input:required { border-left: 4px solid red; }
+    input:valid { background-color: #c8facc; }
+    input:invalid { background-color: #fcdede; }
+
+    /* Estrutura de lista */
+    ul li:first-child { font-weight: bold; }
+    ul li:last-child { color: darkgreen; }
+    ul li:nth-child(odd) { background-color: #f0f0f0; }
+    ul li:nth-child(3) { color: orange; }
+
+    /* Elemento vazio */
+    div:empty {
+      height: 40px;
+      background-color: #ffdddd;
+      margin: 10px 0;
+      border: 1px dashed red;
+    }
+
+    /* NOT */
+    p:not(.destaque) {
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplos de Pseudoclasses CSS</h1>
+
+  <h2>:link / :visited / :hover / :active</h2>
+  <a href="https://www.google.com" target="_blank">Visite o Google</a>
+
+  <h2>:hover / :active em botões</h2>
+  <button>Clique Aqui</button>
+
+  <h2>:focus / :required / :valid / :invalid</h2>
+  <form>
+    <label>Nome (obrigatório): <input type="text" name="nome" required></label><br><br>
+    <label>Email: <input type="email" name="email"></label><br><br>
+    <label>Desativado: <input type="text" disabled></label>
+  </form>
+
+  <h2>:checked / :disabled</h2>
+  <input type="checkbox" id="aceito" checked>
+  <label for="aceito">Aceito os termos</label><br>
+
+  <input type="radio" name="cor" id="vermelho" checked>
+  <label for="vermelho">Vermelho</label><br>
+
+  <input type="radio" name="cor" id="azul" disabled>
+  <label for="azul">Azul (desativado)</label>
+
+  <h2>:first-child / :last-child / :nth-child</h2>
+  <ul>
+    <li>Primeiro item</li>
+    <li>Segundo item</li>
+    <li>Terceiro item</li>
+    <li>Quarto item</li>
+  </ul>
+
+  <h2>:empty</h2>
+  <div></div>
+  <div>Com conteúdo</div>
+
+  <h2>:not()</h2>
+  <p class="destaque">Este parágrafo é destacado.</p>
+  <p>Este não é destacado.</p>
+</body>
+</html>
