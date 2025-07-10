@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url("assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+  background-color: #121214;
+  color: #fff;
+
+}
+
+body * {
+  font-family: "Inter";
+  line-height: 160%;
+}
+
+header {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+header img {
+  width: 15rem;
+}
+
+main {
+  max-width: 36rem;
+  width: 90%;
+  margin: 3rem auto;
+}
+
+section {
+  background-image:linear-gradient(90deg, #9672fc 0%, #43e7ad 50%, #e2d45c);
+  padding-top: 4px;
+  border-radius: 0.625rem;
+  
+}
+
+section > div{
+  background-color: #2a2634;
+  padding: 2rem;
+  padding-top: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+section h2 {
+  letter-spacing: -0.47px;
+}
+section p {
+  letter-spacing: -0.18px;
+  color: #a1a1aa;
+}
+
+main section {
+  animation: appear 0.5s ease-in-out forwards;
+}
+
+@keyframes appear {
+   from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin: 1.25rem 0;
+}
+
+input, select {
+  all: unset;
+  border: 2px solid #9147ff;
+  border-radius: 0.5rem; ;
+  padding: 0.675rem;
+  font-size: 0.875rem;
+  background-color: #00000033;
+}
+
+input {
+  flex: 1;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  background-image: linear-gradient(90deg, #9672fc 0%, #43e7ad 50%, #e2d45c);
+  padding: 0.675rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.12px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(90deg, #43e7ad 0%, #e2d45c 50%, #9672fc);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 1rem rgba(255,248, 107, 0.2);
+}
+
+button:disabled {
+  transition: initial;
+  transform: initial;
+  box-shadow: initial;
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: black;
+  background-image: linear-gradient(90deg, #9672fc 0%, #43e7ad 50%, #e2d45c);
+}
+
+.loading {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+  }
+} 
+
+div#ai-response {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  background-color: #288a6817;
+  border-radius: 0.5rem;
+  border: 1px solid #43e7ad;
+}
+
+.response-content {
+  font-size: 0.875rem;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.response-content p { 
+  color: #fff;
+}
+
+.response-content ul {
+  list-style-position: inside;
+}
+
+.hidden {
+  display: none;
+  transition: all 0.5s linear;
+}
