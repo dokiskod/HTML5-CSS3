@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form method="get" action="index.html" onsubmit="return confirmarEnvio()">
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <input type="email" id="email" placeholder="Digite seu email">
+    <input type="text" id="mensagem" placeholder="Digite sua mensagem">
+    <button>Enviar mensagem</button>
+  </form>
+  <div id="texto-dinamico">
+    <button onclick="chamarfuncao()">Olá</button>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
